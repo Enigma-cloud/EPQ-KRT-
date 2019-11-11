@@ -1,0 +1,84 @@
+
+            Most likely class: HORSE
+            | Probability: 0.820%
+        
+            Second most likely class: TRUCK 
+            | Probability: 0.119%
+        
+            Third most likely class: CAT 
+            | Probability: 0.050%
+        
+            Fourth most likely class: DOG 
+            | Probability: 0.009%
+
+            Most likely class: HORSE
+            | Probability: 0.820%
+        
+            Second most likely class: TRUCK 
+            | Probability: 0.119%
+        
+            Third most likely class: CAT 
+            | Probability: 0.050%
+        
+            Fourth most likely class: DOG 
+            | Probability: 0.009%
+            ==================================
+            Most likely class: HORSE
+            | Probability: 0.982%
+        
+            Second most likely class: AIRPLANE 
+            | Probability: 0.011%
+        
+            Third most likely class: TRUCK 
+            | Probability: 0.002%
+        
+            Fourth most likely class: BIRD 
+            | Probability: 0.002%
+            ==================================
+            Most likely class: CAR
+            | Probability: 0.876%
+        
+            Second most likely class: TRUCK 
+            | Probability: 0.119%
+        
+            Third most likely class: FROG 
+            | Probability: 0.004%
+        
+            Fourth most likely class: AIRPLANE 
+            | Probability: 0.000%
+            ==================================
+            Most likely class: CAR
+            | Probability: 0.876%
+        
+            Second most likely class: TRUCK 
+            | Probability: 0.119%
+        
+            Third most likely class: FROG 
+            | Probability: 0.004%
+        
+            Fourth most likely class: AIRPLANE 
+            | Probability: 0.000%
+            ==================================
+            Most likely class: TRUCK
+            | Probability: 0.827%
+        
+            Second most likely class: CAR 
+            | Probability: 0.166%
+        
+            Third most likely class: SHIP 
+            | Probability: 0.006%
+        
+            Fourth most likely class: AIRPLANE 
+            | Probability: 0.001%
+            ==================================
+            Most likely class: TRUCK
+            | Probability: 0.827%
+        
+            Second most likely class: CAR 
+            | Probability: 0.166%
+        
+            Third most likely class: SHIP 
+            | Probability: 0.006%
+        
+            Fourth most likely class: AIRPLANE 
+            | Probability: 0.001%

@@ -1,0 +1,168 @@
+# imports transition animation
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+
+<StartFloatLayout@FloatLayout>:
+    # Displays background image
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'
+
+    # Displays background image
+    canvas:
+        Rectangle:
+            size: 400, 300
+            pos: 250, 150
+            source: 'start_image.png'
+
+
+<MainFloatLayout@FloatLayout>:
+    # Displays background image
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'bg.png'
+
+     #========Action bar (navigation bar)
+    ActionBar:
+        pos_hint: {'top':1}
+
+        ActionView:
+
+            use_separator: True
+            ActionPrevious:
+                title: "Start page"
+                markup: True
+                with_previous: True
+                on_release:
+                    app.root.transition = FadeTransition()
+                    app.root.current = 'start'
+
+            ActionOverflow:
+            ActionGroup:
+                text: 'Navigation Bar'
+                ActionButton:
+                    text: 'Information'
+                    on_release:
+                        app.root.transition = SlideTransition(direction='right')
+                        app.root.current = 'info'
+                ActionButton:
+                    text: 'Image Classifier'
+                    on_release:
+                        app.root.transition = SlideTransition(direction='left')
+                        app.root.current = 'cnn'
+
+
+# StartWindow
+<StartWindow>:
+    name: "start"
+
+    StartFloatLayout:
+
+        # Displays the title
+        Label:
+            text:"Python Image Classifier"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.3, "top":0.9}
+            size_hint: 0.35, 0.15
+
+        Label:
+            text: 'KRT'
+            font_size: (root.width**2 + root.height**2) / 16**4
+            pos_hint: {"x":0.3, "top":0.13}
+            size_hint: 0.35, 0.15
+
+        # Continue button
+        Button:
+            pos_hint:{"x":0.35,"y":0.15}
+            size_hint: 0.25, 0.08
+            font_size: (root.width**2 + root.height**2) / 16**4
+            text: "Continue"
+            on_press:
+                root.next_page()
+
+# InfoWindow
+<InfoWindow>:
+    name: "info"
+
+    MainFloatLayout:
+
+        # Displays the information
+        Label:
+            text: "[b][u]Information:[/u][/b]"
+            markup: True
+            font_size: (root.width**2 + root.height**2) / 16**4
+            pos_hint: {"x":0.35, "top":0.9}
+            size_hint: 0.35, 0.15
+
+        Label:
+            text: "This is a machine learning model trained using a convolutional neural network and the CIFAR-10 dataset.\nThe Python program used to create the neural network utilizes the Python Machine/Deep learning library, Keras."
+            font_size: (root.width**2 + root.height**2) / 17**4
+            pos_hint: {"x":0.35, "top":0.85}
+            size_hint: 0.35, 0.15
+
+        Label:
+            text: "[u]What is the program about?[/u]"
+            markup: True
+            font_size: (root.width**2 + root.height**2) / 16**4
+            pos_hint: {"x":0.35, "top":0.8}
+            size_hint: 0.35, 0.15
+
+        Label:
+            text: "The program is an image classifier model that is trained to classify 10 different objects, these are: \n- cats\n- dogs\n- frogs\n- deer\n- birds\n- horses\n- ships\n- cars\n- trucks\n- airplanes "
+            font_size: (root.width**2 + root.height**2) / 17**4
+            pos_hint: {"x":0.35, "top":0.6}
+            size_hint: 0.35, 0.15
+
+        Label:
+            text: "[u]To classify an image:[/u]\n1) Import an image (ideally one of the provided images)\n2) Classify the image (the results will be displayed to the right)\n3) You can save the results to a text file (optional)\n\n (Click [b]continue[/b] or [b]use the bar at the top[/b] to navigate)"
+            markup: True
+            font_size: (root.width**2 + root.height**2) / 17**4
+            pos_hint: {"x":0.35, "top":0.35}
+            size_hint: 0.35, 0.15
+
+        # Continue button
+        Button:
+            pos_hint:{"x":0.35,"y":0.05}
+            size_hint: 0.25, 0.08
+            font_size: (root.width**2 + root.height**2) / 16**4
+            text: "Continue"
+            on_press:
+                root.manager.transition = SlideTransition(direction='left')
+                app.root.current = "cnn"
+
+# Main page
+<CNNWindow>:
+    name: "cnn"
+
+    MainFloatLayout:
+
+        # Outcomes save button
+        Button:
+            pos_hint:{"x":0.7,"y":0.05}
+            size_hint: 0.25, 0.08
+            font_size: (root.width**2 + root.height**2) / 16**4
+            text: "Save results to a file"
+            on_press:
+                root.save_results()
+
+        # Analyse image button
+        Button:
+            pos_hint:{"x":0.4,"y":0.05}
+            size_hint: 0.25, 0.08
+            font_size: (root.width**2 + root.height**2) / 16**4
+            text: "Classify image"
+            on_press:
+                root.classify_image()
+
+        # Import button
+        Button:
+            pos_hint:{"x":0.1,"y":0.05}
+            size_hint: 0.25, 0.08
+            font_size: (root.width**2 + root.height**2) / 16**4
+            text: "Import Image"
+            on_press:
+                root.import_image()
