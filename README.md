@@ -1,9 +1,17 @@
-# EPQ-Project on Machine/Deep Learning
+# CNN Image Classification (EPQ Project)
+A machine learning (CNN image classification) Python application that I built as part of a college project (EPQ).<br/>
+ 
 
-This is a machine learning image classifier (built using Python) that I created for my EPQ project. This project is based on the `Python Image Classifier` video provided by `randerson112358` and the user interface is created using Kivy.
+### Built Using
+  - [Kivy](https://kivy.org/#home)
+  - [Tkinter](https://docs.python.org/3/library/tkinter.html)
+  - [Keras](https://keras.io/)
+  - [Scikit-image](https://scikit-image.org/)
+  - [Matplotlib](https://matplotlib.org/)
+  - [Numpy](https://numpy.org/)
 
-To run the program, you must have the following libraries installed (along with Python):
-1) Kivy (Python GUI library) *some dependencies may need to be installed (check the official Kivy website)
-2) Tkinter (Built-in Python GUI library)
-3) Keras (Machine/Deep learning library)
-4) Scikit-image (Image processing library)
+## Usage
+This project was developed towards the end of 2019 and therefore may be broken (due to dependencies). 
+
+## Acknowledgements
+  - [randerson112358](https://github.com/randerson112358) - credit for providing the online tutorial for training the image classifier (used in the application)
