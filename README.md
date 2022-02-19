@@ -11,7 +11,8 @@ A machine learning (CNN image classification) Python application that I built as
   - [Numpy](https://numpy.org/)
 
 ## Usage
-This project was developed towards the end of 2019 and therefore it may be broken (due to dependencies) upon installation. 
+This project was developed towards the end of 2019 and therefore it may be broken (due to dependencies) upon installation.<br/>
+Check the [demo video](https://youtu.be/JrznA7KZbm4) to see it in action.
 
 ## Acknowledgements
   - [randerson112358](https://github.com/randerson112358) - credit for providing the online tutorial for training the image classifier (used in the application)
